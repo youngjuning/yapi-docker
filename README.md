@@ -2,6 +2,8 @@
 
 ## 使用 youngjuning/yapi
 
+> 使脚本可执行： chmod a+x run
+
 ```sh
 $ ./run.sh
 ```
