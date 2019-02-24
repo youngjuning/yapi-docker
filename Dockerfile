@@ -1,8 +1,8 @@
 FROM node:10.15.1-alpine as builder
 
-RUN apk add --no-cache git python make openssl tar gcc
+# 安装依赖
+# RUN apk add --no-cache git python make openssl tar gcc
 ADD yapi.tgz /home/
-RUN ls /home/node/
 
 RUN mkdir /yapi && mv /home/package /yapi/vendors
 
