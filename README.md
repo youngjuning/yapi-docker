@@ -11,6 +11,34 @@ $ ./run.sh
 - 默认登录账号 `admin@admin.com`，密码 `ymfe.org`
 - 自定义配置文件挂载到目录 `/api/config.json`，官方自定义配置文件 -> [传送门](https://github.com/YMFE/yapi/blob/master/config_example.json)
 
+## 修改管理员账号密码
+
+### 暴露 27017 端口
+
+```sh
+$ docker rm -f mongo-yapi
+$ docker run -d \
+  --name mongo-yapi \
+  -v mongo_data_yapi:/data/db \
+  -p 27017:27017 \
+  mongo
+```
+
+### 使用 Navicat 连接数据库
+
+> 连接不需要密码，连接之后修改 user 表中的 username 字段。
+> 不要修改密码，yapi做了密码加密；这个请登录平台修改
+
+### 关闭暴露的端口
+
+```sh
+$ docker rm -f mongo-yapi
+$ docker run -d \
+  --name mongo-yapi \
+  -v mongo_data_yapi:/data/db \
+  mongo
+```
+
 ## 构建任意版本 yapi 镜像
 
 ### 镜像构建脚本 build
