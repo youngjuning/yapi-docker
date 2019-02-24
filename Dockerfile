@@ -11,7 +11,7 @@ RUN cd /yapi/vendors && \
   
 FROM node:10.15.1-alpine
 
-MAINTAINER 1003719811@qq.com
+MAINTAINER youngjuning@aliyun.com
 ENV TZ="Asia/Shanghai" HOME="/"
 WORKDIR ${HOME}
 COPY --from=builder /yapi/vendors /yapi/vendors

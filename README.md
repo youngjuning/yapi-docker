@@ -1,18 +1,38 @@
 # yapi-docker
 
-## 什么是 YApi
+## 使用 youngjuning/yapi
 
-![](https://user-images.githubusercontent.com/13204332/48997484-18958380-f18b-11e8-9c1f-77b3ebe949d1.png)
+```sh
+$ ./run.sh
+```
 
-YApi 是高效、易用、功能强大的 api 管理平台，旨在为开发、产品、测试人员提供更优雅的接口管理服务。可以帮助开发者轻松创建、发布、维护 API，YApi 还为用户提供了优秀的交互体验，开发人员只需利用平台提供的接口数据写入工具以及简单的点击操作就可以实现接口的管理。
+- 默认登录账号 admin@admin.com，密码 ymfe.org
+- 自定义配置文件挂载到目录 `/api/config.json`，官方自定义配置文件 -> [传送门](https://github.com/YMFE/yapi/blob/master/config_example.json)
 
-## 什么是 Docker
+## 构建任意版本 yapi 镜像
 
-Docker 是一个开源的应用容器引擎，基于 Go 语言 并遵从 Apache2.0 协议开源。
+### 镜像构建脚本 build
 
-Docker 可以让开发者打包他们的应用以及依赖包到一个轻量级、可移植的容器中，然后发布到任何流行的 Linux 机器上，也可以实现虚拟化。
+> 使脚本可执行： chmod a+x build
 
-容器是完全使用沙箱机制，相互之间不会有任何接口（类似 iPhone 的 app）,更重要的是容器性能开销极低。
+```sh
+$ ./build.sh 1.5.6
+```
+
+## 发布到 DockerHub
+
+### 登录
+
+```sh
+$ docker login
+```
+
+### 发布
+
+```sh
+$ docker tag youngjuning/yapi:latest youngjuning/yapi:1.5.6
+$ docker push youngjuning/yapi:1.5.6
+```
 
 ## TODO
 
