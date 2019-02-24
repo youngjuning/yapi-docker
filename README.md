@@ -2,7 +2,7 @@
 
 ## 使用 youngjuning/yapi
 
-> 使脚本可执行： chmod a+x run
+> 使脚本可执行： chmod a+x run.sh
 
 ```sh
 $ ./run.sh
@@ -15,7 +15,7 @@ $ ./run.sh
 
 ### 镜像构建脚本 build
 
-> 使脚本可执行： chmod a+x build
+> 使脚本可执行： chmod a+x build.sh
 
 ```sh
 $ ./build.sh 1.5.6
