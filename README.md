@@ -92,6 +92,58 @@ $ docker start yapi
 $ ./upgrade.sh
 ```
 
+## 邮箱配置
+
+### QQ邮箱
+
+```json
+{
+  "port": "3000",
+  "adminAccount": "youngjuning@aliyun.com",
+  "db": {
+    "servername": "mongo",
+    "DATABASE": "yapi",
+    "port": 27017
+  },
+  "mail": {
+    "enable": true,
+    "host": "smtp.qq.com",
+    "port": 465,
+    "from": "******@qq.com",
+    "auth": {
+      "user": "******@qq.com",
+      "pass": "授权码"
+    }
+  },
+  "versionNotify": true
+}
+```
+
+### 163邮箱
+
+```json
+{
+  "port": "3000",
+  "adminAccount": "1003719811@qq.com",
+  "db": {
+    "servername": "mongo",
+    "DATABASE": "yapi",
+    "port": 27017
+  },
+  "mail": {
+    "enable": true,
+    "host": "smtp.163.com",
+    "port": 465,
+    "from": "******@163.com",
+    "auth": {
+      "user": "******@163.com",
+      "pass": "授权码"
+    }
+  },
+  "versionNotify": true
+}
+```
+
 ## TODO
 
 1. docker-compose 文件
