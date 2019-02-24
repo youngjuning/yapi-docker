@@ -18,7 +18,8 @@ $ ./run.sh
 > 使脚本可执行： chmod a+x build.sh
 
 ```sh
-$ ./build.sh 1.5.6
+# ./build.sh 1.5.6
+$ ./build.sh <Version>
 ```
 
 ## 发布到 DockerHub
