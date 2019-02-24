@@ -8,7 +8,7 @@
 $ ./run.sh
 ```
 
-- 默认登录账号 admin@admin.com，密码 ymfe.org
+- 默认登录账号 `admin@admin.com`，密码 `ymfe.org`
 - 自定义配置文件挂载到目录 `/api/config.json`，官方自定义配置文件 -> [传送门](https://github.com/YMFE/yapi/blob/master/config_example.json)
 
 ## 构建任意版本 yapi 镜像
