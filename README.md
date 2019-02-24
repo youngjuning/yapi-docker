@@ -29,6 +29,28 @@ $ ./build.sh 1.5.6
 $ docker login
 ```
 
+## 常用命令
+
+### 关闭Yapi
+
+```sh
+$ docker stop yapi
+```
+
+### 启动 Yapi
+
+```sh
+$ docker start yapi
+```
+
+### 升级 Yapi
+
+> 使脚本可执行： chmod a+x upgrade.sh
+
+```sh
+$ ./upgrade.sh
+```
+
 ### 发布
 
 ```sh
