@@ -116,8 +116,8 @@ $ docker login
 # 1.5.6 为yapi版本号
 $ docker tag yapi-docker youngjuning/yapi
 $ docker tag yapi-docker youngjuning/yapi:1.5.6
-$ docker push yapi-docker youngjuning/yapi
-$ docker push yapi-docker youngjuning/yapi:1.5.6
+$ docker push youngjuning/yapi
+$ docker push youngjuning/yapi:1.5.6
 ```
 
 ## 常用命令

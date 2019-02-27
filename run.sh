@@ -9,7 +9,7 @@ docker run -it --rm \
   --link mongo-yapi:mongo \
   --entrypoint npm \
   --workdir /yapi/vendors \
-  -v yapi_data:/yapi/ \
+  -v yapi_data:/yapi/config/ \
   youngjuning/yapi \
   run install-server
 # 3、启动 Yapi 服务
@@ -18,6 +18,6 @@ docker run -d \
   --link mongo-yapi:mongo \
   --workdir /yapi/vendors \
   -p 3000:3000 \
-  -v yapi_data:/yapi/ \
+  -v yapi_data:/yapi/config/ \
   youngjuning/yapi \
   server/app.js
