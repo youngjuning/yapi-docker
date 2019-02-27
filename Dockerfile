@@ -18,3 +18,8 @@ COPY --from=builder /yapi/vendors /yapi/vendors
 COPY config.json /yapi/
 EXPOSE 3000
 ENTRYPOINT ["node"]
+
+# RUN mkdir /yapi/config
+# COPY /yapi/config.json /yapi/config/
+
+# RUN cd /yapi/vendors/server
