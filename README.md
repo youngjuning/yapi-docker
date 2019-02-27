@@ -1,7 +1,5 @@
 # yapi-docker
 
-[TOC]
-
 ## 使用 youngjuning/yapi
 
 > 使脚本可执行： chmod a+x run.sh
@@ -39,57 +37,6 @@ $ docker run -d \
   --name mongo-yapi \
   -v mongo_data_yapi:/data/db \
   mongo
-```
-
-## 构建任意版本 yapi 镜像
-
-### 镜像构建脚本 build
-
-> 使脚本可执行： chmod a+x build.sh
-
-```sh
-# ./build.sh 1.5.6
-$ ./build.sh <Version>
-```
-
-## 发布到 DockerHub
-
-### 登录
-
-```sh
-$ docker login
-```
-
-### 发布
-
-```sh
-# 1.5.6 为yapi版本号
-$ docker tag yapi-docker youngjuning/yapi
-$ docker tag yapi-docker youngjuning/yapi:1.5.6
-$ docker push yapi-docker youngjuning/yapi
-$ docker push yapi-docker youngjuning/yapi:1.5.6
-```
-
-## 常用命令
-
-### 关闭Yapi
-
-```sh
-$ docker stop yapi
-```
-
-### 启动 Yapi
-
-```sh
-$ docker start yapi
-```
-
-### 升级 Yapi
-
-> 使脚本可执行： chmod a+x upgrade.sh
-
-```sh
-$ ./upgrade.sh
 ```
 
 ## 邮箱配置
@@ -142,6 +89,57 @@ $ ./upgrade.sh
   },
   "versionNotify": true
 }
+```
+
+## 构建任意版本 yapi 镜像
+
+### 镜像构建脚本 build
+
+> 使脚本可执行： chmod a+x build.sh
+
+```sh
+# ./build.sh 1.5.6
+$ ./build.sh <Version>
+```
+
+## 发布到 DockerHub
+
+### 登录
+
+```sh
+$ docker login
+```
+
+### 发布
+
+```sh
+# 1.5.6 为yapi版本号
+$ docker tag yapi-docker youngjuning/yapi
+$ docker tag yapi-docker youngjuning/yapi:1.5.6
+$ docker push yapi-docker youngjuning/yapi
+$ docker push yapi-docker youngjuning/yapi:1.5.6
+```
+
+## 常用命令
+
+### 关闭Yapi
+
+```sh
+$ docker stop yapi
+```
+
+### 启动 Yapi
+
+```sh
+$ docker start yapi
+```
+
+### 升级 Yapi
+
+> 使脚本可执行： chmod a+x upgrade.sh
+
+```sh
+$ ./upgrade.sh
 ```
 
 ## TODO
