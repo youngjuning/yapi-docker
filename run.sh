@@ -7,7 +7,6 @@ docker run -d \
   mongo
 # 2、初始化 Yapi 数据库索引及管理员账号
 docker run -it --rm \
-  --restart always \
   --link mongo-yapi:mongo \
   --entrypoint npm \
   --workdir /yapi/vendors \
